@@ -19,7 +19,7 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        sudo -E apt-get remove -y --purge azure-cli ghc zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php*
+        sudo -E apt-get remove -y --purge azure-cli ghc zulu*  llvm* firefox google* dotnet* powershell openjdk* mysql* php*
         sudo -E rm -rf /usr/share/dotnet /etc/mysql /etc/php /usr/lib/jvm/
         sudo -E apt-get update -y
         sudo -E apt-get install -y ant autoconf bison build-essential cmake flex git gperf ksh \
