@@ -45,7 +45,7 @@ jobs:
 
     - name: Compile JCEF
       env:
-        JDK_11: /usr/lib/jvm/java-11-openjdk-amd64
+        JDK_17: /usr/lib/jvm/java-17-openjdk-amd64
         ANT_HOME: /usr/share/ant
       run: |
         git clone https://github.com/JetBrains/jcef.git jcef
@@ -61,8 +61,8 @@ jobs:
 
     - name: Patch & Compile JetBrainsRuntime with JCEF
       env:
-        JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64
-        JDK_HOME: /usr/lib/jvm/java-11-openjdk-amd64
+        JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
+        JDK_HOME: /usr/lib/jvm/java-17-openjdk-amd64
       run: |
         git config --global core.autocrlf input
         git clone -b master --single-branch https://github.com/JetBrains/JetBrainsRuntime.git
